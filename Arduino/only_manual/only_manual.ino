@@ -66,21 +66,3 @@ void set_automation(){
     return;
   }
 }
-
-void set_manual(){
-  int timeLimit = 250;
-  Serial.println("In Manual mode");
-  while(timeLimit>0){
-    digitalWrite(ledPin, HIGH);  // turn LED ON
-    digitalWrite(relayOut,HIGH);
-    timeLimit--;
-    Serial.println("timeLimit");
-    Serial.println(timeLimit);
-  }
-  if(timeLimit==0){
-    digitalWrite(ledPin, LOW);  // turn LED ON
-    digitalWrite(relayOut,LOW);
-    return;
-//    digitalWrite(relayOut,HIGH);
-  }
-}
